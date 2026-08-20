@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/autoware_core/latest/localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/autoware_core/latest/common/autoware_interface_spec_lint/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../autoware_global_parameter_loader/Readme/">
       
       
-        <link rel="next" href="../../../../../autoware_pose_initializer/">
+        <link rel="next" href="../autoware_interpolation/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../../docs/assets/images/autoware-foundation.png">
+      <link rel="icon" href="../../docs/assets/images/autoware-foundation.png">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>ndt_omp - Autoware Core Documentation</title>
+        <title>autoware_interface_spec_lint - Autoware Core Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,11 +51,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../docs/assets/css/extra.css">
+      <link rel="stylesheet" href="../../docs/assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ndt_omp" class="md-skip">
+        <a href="#autoware_interface_spec_lint" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Autoware Core Documentation" class="md-header__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Core Documentation" class="md-header__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-32H96v32c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 304a32 32 0 1 0-64 0 32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ndt_omp
+              autoware_interface_spec_lint
             
           </span>
         </div>
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../api/autoware_adapi_adaptors/" class="md-tabs__link">
+        <a href="../../api/autoware_adapi_adaptors/" class="md-tabs__link">
           
   
   
@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../autoware_core/" class="md-tabs__link">
+        <a href="../../autoware_core/" class="md-tabs__link">
           
   
   
@@ -277,6 +277,8 @@
   
   
   
+    
+  
   
     
     
@@ -284,11 +286,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../../common/autoware_agnocast_wrapper/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../autoware_agnocast_wrapper/" class="md-tabs__link">
           
   
   
@@ -320,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../control/autoware_command_gate/" class="md-tabs__link">
+        <a href="../../control/autoware_command_gate/" class="md-tabs__link">
           
   
   
@@ -341,8 +345,6 @@
   
   
   
-    
-  
   
     
     
@@ -350,13 +352,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../../autoware_core_localization/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../localization/autoware_core_localization/" class="md-tabs__link">
           
   
   
@@ -388,7 +388,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../map/autoware_core_map/" class="md-tabs__link">
+        <a href="../../map/autoware_core_map/" class="md-tabs__link">
           
   
   
@@ -420,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../perception/autoware_core_perception/" class="md-tabs__link">
+        <a href="../../perception/autoware_core_perception/" class="md-tabs__link">
           
   
   
@@ -452,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../planning/autoware_core_planning/" class="md-tabs__link">
+        <a href="../../planning/autoware_core_planning/" class="md-tabs__link">
           
   
   
@@ -484,7 +484,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../sensing/autoware_core_sensing/" class="md-tabs__link">
+        <a href="../../sensing/autoware_core_sensing/" class="md-tabs__link">
           
   
   
@@ -516,7 +516,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../testing/autoware_planning_test_manager/" class="md-tabs__link">
+        <a href="../../testing/autoware_planning_test_manager/" class="md-tabs__link">
           
   
   
@@ -548,7 +548,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../vehicle/autoware_core_vehicle/" class="md-tabs__link">
+        <a href="../../vehicle/autoware_core_vehicle/" class="md-tabs__link">
           
   
   
@@ -593,7 +593,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Autoware Core Documentation" class="md-nav__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
+    <a href="../.." title="Autoware Core Documentation" class="md-nav__button md-logo" aria-label="Autoware Core Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-32H96v32c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 304a32 32 0 1 0-64 0 32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
@@ -712,7 +712,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../api/autoware_adapi_adaptors/" class="md-nav__link ">
+            <a href="../../api/autoware_adapi_adaptors/" class="md-nav__link ">
               
   
   
@@ -784,7 +784,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../api/autoware_adapi_specs/" class="md-nav__link ">
+            <a href="../../api/autoware_adapi_specs/" class="md-nav__link ">
               
   
   
@@ -856,7 +856,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../api/autoware_core_api/" class="md-nav__link ">
+            <a href="../../api/autoware_core_api/" class="md-nav__link ">
               
   
   
@@ -930,7 +930,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../api/autoware_default_adapi/" class="md-nav__link ">
+            <a href="../../api/autoware_default_adapi/" class="md-nav__link ">
               
   
   
@@ -1036,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../api/autoware_default_adapi/document/interface/" class="md-nav__link">
+      <a href="../../api/autoware_default_adapi/document/interface/" class="md-nav__link">
         
   
   
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../api/autoware_default_adapi/document/localization/" class="md-nav__link">
+      <a href="../../api/autoware_default_adapi/document/localization/" class="md-nav__link">
         
   
   
@@ -1092,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../api/autoware_default_adapi/document/routing/" class="md-nav__link">
+      <a href="../../api/autoware_default_adapi/document/routing/" class="md-nav__link">
         
   
   
@@ -1168,7 +1168,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../autoware_core/" class="md-nav__link ">
+            <a href="../../autoware_core/" class="md-nav__link ">
               
   
   
@@ -1211,8 +1211,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1260,21 +1262,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1292,7 +1295,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1324,10 +1327,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1337,7 +1343,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_agnocast_wrapper/" class="md-nav__link ">
+            <a href="../autoware_agnocast_wrapper/" class="md-nav__link ">
               
   
   
@@ -1355,7 +1361,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1439,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_agnocast_wrapper/docs/review_guide/" class="md-nav__link">
+      <a href="../autoware_agnocast_wrapper/docs/review_guide/" class="md-nav__link">
         
   
   
@@ -1495,10 +1501,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1508,7 +1517,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_component_interface_admission/" class="md-nav__link ">
+            <a href="../autoware_component_interface_admission/" class="md-nav__link ">
               
   
   
@@ -1567,10 +1576,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1580,7 +1592,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_component_interface_specs/" class="md-nav__link ">
+            <a href="../autoware_component_interface_specs/" class="md-nav__link ">
               
   
   
@@ -1639,10 +1651,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1652,7 +1667,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_component_interface_utils/" class="md-nav__link ">
+            <a href="../autoware_component_interface_utils/" class="md-nav__link ">
               
   
   
@@ -1711,10 +1726,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1724,7 +1742,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_geography_utils/" class="md-nav__link ">
+            <a href="../autoware_geography_utils/" class="md-nav__link ">
               
   
   
@@ -1781,10 +1799,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1793,7 +1814,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
             
   
   
@@ -1829,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_global_parameter_loader/Readme/" class="md-nav__link">
+      <a href="../autoware_global_parameter_loader/Readme/" class="md-nav__link">
         
   
   
@@ -1862,6 +1883,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1877,20 +1900,21 @@
       
       
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
+          
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_interface_spec_lint/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1909,7 +1933,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1949,10 +1973,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1962,7 +1989,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_interpolation/" class="md-nav__link ">
+            <a href="../autoware_interpolation/" class="md-nav__link ">
               
   
   
@@ -2021,10 +2048,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2034,7 +2064,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_kalman_filter/" class="md-nav__link ">
+            <a href="../autoware_kalman_filter/" class="md-nav__link ">
               
   
   
@@ -2093,10 +2123,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2106,7 +2139,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_lanelet2_utils/" class="md-nav__link ">
+            <a href="../autoware_lanelet2_utils/" class="md-nav__link ">
               
   
   
@@ -2167,10 +2200,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2180,7 +2216,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_motion_utils/" class="md-nav__link ">
+            <a href="../autoware_motion_utils/" class="md-nav__link ">
               
   
   
@@ -2198,7 +2234,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2340,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_motion_utils/docs/vehicle/vehicle/" class="md-nav__link">
+      <a href="../autoware_motion_utils/docs/vehicle/vehicle/" class="md-nav__link">
         
   
   
@@ -2404,10 +2440,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2417,7 +2456,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_node/" class="md-nav__link ">
+            <a href="../autoware_node/" class="md-nav__link ">
               
   
   
@@ -2476,10 +2515,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2489,7 +2531,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_object_recognition_utils/" class="md-nav__link ">
+            <a href="../autoware_object_recognition_utils/" class="md-nav__link ">
               
   
   
@@ -2546,10 +2588,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2558,7 +2603,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_14" >
         
           
-          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="">
             
   
   
@@ -2652,7 +2697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_osqp_interface/design/osqp_interface-design/" class="md-nav__link">
+      <a href="../autoware_osqp_interface/design/osqp_interface-design/" class="md-nav__link">
         
   
   
@@ -2708,10 +2753,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2721,7 +2769,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_point_types/" class="md-nav__link ">
+            <a href="../autoware_point_types/" class="md-nav__link ">
               
   
   
@@ -2780,10 +2828,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2793,7 +2844,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_qos_utils/" class="md-nav__link ">
+            <a href="../autoware_qos_utils/" class="md-nav__link ">
               
   
   
@@ -2850,10 +2901,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2862,7 +2916,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_17" >
         
           
-          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="">
             
   
   
@@ -2956,7 +3010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_qp_interface/design/qp_interface-design/" class="md-nav__link">
+      <a href="../autoware_qp_interface/design/qp_interface-design/" class="md-nav__link">
         
   
   
@@ -3014,10 +3068,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -3027,7 +3084,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_signal_processing/" class="md-nav__link ">
+            <a href="../autoware_signal_processing/" class="md-nav__link ">
               
   
   
@@ -3045,7 +3102,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_18" id="__nav_3_18_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -3129,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../common/autoware_signal_processing/documentation/ButterworthFilter/" class="md-nav__link">
+      <a href="../autoware_signal_processing/documentation/ButterworthFilter/" class="md-nav__link">
         
   
   
@@ -3185,10 +3242,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -3198,7 +3258,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_trajectory/" class="md-nav__link ">
+            <a href="../autoware_trajectory/" class="md-nav__link ">
               
   
   
@@ -3257,10 +3317,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -3270,7 +3333,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../common/autoware_vehicle_info_utils/" class="md-nav__link ">
+            <a href="../autoware_vehicle_info_utils/" class="md-nav__link ">
               
   
   
@@ -3411,7 +3474,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../control/autoware_command_gate/" class="md-nav__link ">
+            <a href="../../control/autoware_command_gate/" class="md-nav__link ">
               
   
   
@@ -3483,7 +3546,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../control/autoware_core_control/" class="md-nav__link ">
+            <a href="../../control/autoware_core_control/" class="md-nav__link ">
               
   
   
@@ -3555,7 +3618,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../control/autoware_simple_pure_pursuit/" class="md-nav__link ">
+            <a href="../../control/autoware_simple_pure_pursuit/" class="md-nav__link ">
               
   
   
@@ -3606,10 +3669,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -3633,22 +3694,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -3666,7 +3726,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3696,13 +3756,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3712,7 +3769,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_core_localization/" class="md-nav__link ">
+            <a href="../../localization/autoware_core_localization/" class="md-nav__link ">
               
   
   
@@ -3771,13 +3828,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3787,7 +3841,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_ekf_localizer/" class="md-nav__link ">
+            <a href="../../localization/autoware_ekf_localizer/" class="md-nav__link ">
               
   
   
@@ -3846,13 +3900,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3862,7 +3913,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_gyro_odometer/" class="md-nav__link ">
+            <a href="../../localization/autoware_gyro_odometer/" class="md-nav__link ">
               
   
   
@@ -3921,13 +3972,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3937,7 +3985,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_localization_util/" class="md-nav__link ">
+            <a href="../../localization/autoware_localization_util/" class="md-nav__link ">
               
   
   
@@ -3981,8 +4029,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4000,21 +4046,20 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../localization/autoware_ndt_scan_matcher/" class="md-nav__link ">
               
   
   
@@ -4032,13 +4077,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4055,10 +4100,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4073,11 +4116,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
@@ -4098,7 +4143,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4113,10 +4158,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4131,11 +4174,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_2_1" >
         
           
           <label class="md-nav__link" for="__nav_5_5_2_1" id="__nav_5_5_2_1_label" tabindex="0">
@@ -4156,7 +4201,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_5_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_5_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4171,10 +4216,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4189,11 +4232,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2_1_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_2_1_1" >
         
           
           <label class="md-nav__link" for="__nav_5_5_2_1_1" id="__nav_5_5_2_1_1_label" tabindex="0">
@@ -4214,7 +4259,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_5_5_2_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_5_5_2_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4229,8 +4274,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4249,15 +4292,17 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2_1_1_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_2_1_1_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../localization/autoware_ndt_scan_matcher/include/autoware/ndt_scan_matcher/ndt_omp/" class="md-nav__link ">
               
   
   
@@ -4276,7 +4321,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_5_5_2_1_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_5_5_2_1_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_2_1_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4348,13 +4393,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4364,7 +4406,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_pose_initializer/" class="md-nav__link ">
+            <a href="../../localization/autoware_pose_initializer/" class="md-nav__link ">
               
   
   
@@ -4423,13 +4465,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4439,7 +4478,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_stop_filter/" class="md-nav__link ">
+            <a href="../../localization/autoware_stop_filter/" class="md-nav__link ">
               
   
   
@@ -4498,13 +4537,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4514,7 +4550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../autoware_twist2accel/" class="md-nav__link ">
+            <a href="../../localization/autoware_twist2accel/" class="md-nav__link ">
               
   
   
@@ -4659,7 +4695,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../map/autoware_core_map/" class="md-nav__link ">
+            <a href="../../map/autoware_core_map/" class="md-nav__link ">
               
   
   
@@ -4731,7 +4767,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../map/autoware_lanelet2_map_visualizer/" class="md-nav__link ">
+            <a href="../../map/autoware_lanelet2_map_visualizer/" class="md-nav__link ">
               
   
   
@@ -4803,7 +4839,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../map/autoware_map_height_fitter/" class="md-nav__link ">
+            <a href="../../map/autoware_map_height_fitter/" class="md-nav__link ">
               
   
   
@@ -4875,7 +4911,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../map/autoware_map_loader/" class="md-nav__link ">
+            <a href="../../map/autoware_map_loader/" class="md-nav__link ">
               
   
   
@@ -4947,7 +4983,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../map/autoware_map_projection_loader/" class="md-nav__link ">
+            <a href="../../map/autoware_map_projection_loader/" class="md-nav__link ">
               
   
   
@@ -5090,7 +5126,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../perception/autoware_core_perception/" class="md-nav__link ">
+            <a href="../../perception/autoware_core_perception/" class="md-nav__link ">
               
   
   
@@ -5162,7 +5198,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../perception/autoware_euclidean_cluster_object_detector/" class="md-nav__link ">
+            <a href="../../perception/autoware_euclidean_cluster_object_detector/" class="md-nav__link ">
               
   
   
@@ -5236,7 +5272,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../perception/autoware_ground_filter/" class="md-nav__link ">
+            <a href="../../perception/autoware_ground_filter/" class="md-nav__link ">
               
   
   
@@ -5338,7 +5374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../perception/autoware_ground_filter/docs/ground-filter/" class="md-nav__link">
+      <a href="../../perception/autoware_ground_filter/docs/ground-filter/" class="md-nav__link">
         
   
   
@@ -5407,7 +5443,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../perception/autoware_perception_objects_converter/" class="md-nav__link ">
+            <a href="../../perception/autoware_perception_objects_converter/" class="md-nav__link ">
               
   
   
@@ -5562,7 +5598,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_core_planning/" class="md-nav__link ">
+            <a href="../../planning/autoware_core_planning/" class="md-nav__link ">
               
   
   
@@ -5634,7 +5670,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_mission_planner/" class="md-nav__link ">
+            <a href="../../planning/autoware_mission_planner/" class="md-nav__link ">
               
   
   
@@ -5706,7 +5742,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_objects_of_interest_marker_interface/" class="md-nav__link ">
+            <a href="../../planning/autoware_objects_of_interest_marker_interface/" class="md-nav__link ">
               
   
   
@@ -5778,7 +5814,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_path_generator/" class="md-nav__link ">
+            <a href="../../planning/autoware_path_generator/" class="md-nav__link ">
               
   
   
@@ -5850,7 +5886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_planning_factor_interface/" class="md-nav__link ">
+            <a href="../../planning/autoware_planning_factor_interface/" class="md-nav__link ">
               
   
   
@@ -5922,7 +5958,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_planning_topic_converter/" class="md-nav__link ">
+            <a href="../../planning/autoware_planning_topic_converter/" class="md-nav__link ">
               
   
   
@@ -5994,7 +6030,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_route_handler/" class="md-nav__link ">
+            <a href="../../planning/autoware_route_handler/" class="md-nav__link ">
               
   
   
@@ -6066,7 +6102,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/autoware_velocity_smoother/" class="md-nav__link ">
+            <a href="../../planning/autoware_velocity_smoother/" class="md-nav__link ">
               
   
   
@@ -6200,7 +6236,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner/" class="md-nav__link ">
+            <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner/" class="md-nav__link ">
               
   
   
@@ -6272,7 +6308,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner_common/" class="md-nav__link ">
+            <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_planner_common/" class="md-nav__link ">
               
   
   
@@ -6344,7 +6380,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/behavior_velocity_planner/autoware_behavior_velocity_stop_line_module/" class="md-nav__link ">
+            <a href="../../planning/behavior_velocity_planner/autoware_behavior_velocity_stop_line_module/" class="md-nav__link ">
               
   
   
@@ -6486,7 +6522,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_obstacle_stop_module/" class="md-nav__link ">
+            <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_obstacle_stop_module/" class="md-nav__link ">
               
   
   
@@ -6558,7 +6594,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_planner/" class="md-nav__link ">
+            <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_planner/" class="md-nav__link ">
               
   
   
@@ -6630,7 +6666,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../planning/motion_velocity_planner/autoware_motion_velocity_planner_common/" class="md-nav__link ">
+            <a href="../../planning/motion_velocity_planner/autoware_motion_velocity_planner_common/" class="md-nav__link ">
               
   
   
@@ -6783,7 +6819,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../sensing/autoware_core_sensing/" class="md-nav__link ">
+            <a href="../../sensing/autoware_core_sensing/" class="md-nav__link ">
               
   
   
@@ -6855,7 +6891,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../sensing/autoware_crop_box_filter/" class="md-nav__link ">
+            <a href="../../sensing/autoware_crop_box_filter/" class="md-nav__link ">
               
   
   
@@ -6927,7 +6963,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../sensing/autoware_downsample_filters/" class="md-nav__link ">
+            <a href="../../sensing/autoware_downsample_filters/" class="md-nav__link ">
               
   
   
@@ -6999,7 +7035,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../sensing/autoware_gnss_poser/" class="md-nav__link ">
+            <a href="../../sensing/autoware_gnss_poser/" class="md-nav__link ">
               
   
   
@@ -7071,7 +7107,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../sensing/autoware_vehicle_velocity_converter/" class="md-nav__link ">
+            <a href="../../sensing/autoware_vehicle_velocity_converter/" class="md-nav__link ">
               
   
   
@@ -7216,7 +7252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../testing/autoware_planning_test_manager/" class="md-nav__link ">
+            <a href="../../testing/autoware_planning_test_manager/" class="md-nav__link ">
               
   
   
@@ -7288,7 +7324,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../testing/autoware_pyplot/" class="md-nav__link ">
+            <a href="../../testing/autoware_pyplot/" class="md-nav__link ">
               
   
   
@@ -7360,7 +7396,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../testing/autoware_test_node/" class="md-nav__link ">
+            <a href="../../testing/autoware_test_node/" class="md-nav__link ">
               
   
   
@@ -7432,7 +7468,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../testing/autoware_test_utils/" class="md-nav__link ">
+            <a href="../../testing/autoware_test_utils/" class="md-nav__link ">
               
   
   
@@ -7595,7 +7631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../testing/autoware_testing/design/autoware_testing-design/" class="md-nav__link">
+      <a href="../../testing/autoware_testing/design/autoware_testing-design/" class="md-nav__link">
         
   
   
@@ -7729,7 +7765,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../vehicle/autoware_core_vehicle/" class="md-nav__link ">
+            <a href="../../vehicle/autoware_core_vehicle/" class="md-nav__link ">
               
   
   
@@ -7796,6 +7832,103 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binding-manifest-freshness-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binding manifest-freshness gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#honest-deferrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Honest deferrals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppression contract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manifest_fresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manifest_fresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gate-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate config
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7814,15 +7947,127 @@
   
 
 
-<div><h1 id="ndt_omp">ndt_omp<a class="headerlink" href="#ndt_omp" title="Permanent link">#</a></h1>
-<!---->
+<div><h1 id="autoware_interface_spec_lint">autoware_interface_spec_lint<a class="headerlink" href="#autoware_interface_spec_lint" title="Permanent link">#</a></h1>
+<p>Config-driven static and manifest checks for the Autoware component interface specifications defined in <code>autoware_component_interface_specs</code>. This package gives fast, pre-build, human-readable diagnostics that complement the compile-time <code>all_specs_valid&lt;&gt;</code> static assertions: it catches "defined-but-unregistered" specs, version inconsistencies, cross-owner shadowing, heavy-raw topics that must not be versioned, and manifest drift that the compiler alone does not.</p>
+<p>Each gate's severity comes from the committed gate config (<code>config/interface_gates.yaml</code>): <code>off</code> (not run), <code>warn</code> (advisory, prints findings but never fails), or <code>error</code> (fails the build when it reports at least one finding). Every implemented gate is set to <code>error</code>, so a finding now fails CI and the pre-commit hook; only the gates listed under "Honest deferrals" below are <code>off</code>. <code>--warn-only</code> overrides every gate to exit 0 for local advisory runs.</p>
+<h2 id="gates">Gates<a class="headerlink" href="#gates" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Input</th>
+<th>Severity</th>
+<th>Flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>interface_spec_concept</code></td>
+<td>domain headers</td>
+<td>error</td>
+<td>a struct with a <code>name[]</code> that is neither a valid topic (<code>Message</code> + <code>depth</code> + <code>reliability</code> + <code>durability</code>) nor a valid service (<code>Service</code>)</td>
+</tr>
+<tr>
+<td><code>spec_registered</code></td>
+<td>domain headers</td>
+<td>error</td>
+<td>a spec struct not listed in its namespace's <code>using Specs = std::tuple&lt;...&gt;</code> (unless it carries the suppression marker)</td>
+</tr>
+<tr>
+<td><code>version_consistency</code></td>
+<td>headers + manifest</td>
+<td>error</td>
+<td>a domain not declaring exactly one <code>version{...}</code>, or a manifest version that disagrees with the header version</td>
+</tr>
+<tr>
+<td><code>qos_consistency</code></td>
+<td>headers + manifest</td>
+<td>error</td>
+<td>a registered spec whose <code>history</code> / <code>depth</code> / <code>reliability</code> / <code>durability</code> disagrees with its manifest <code>qos</code> block, is missing from the manifest, or names a QoS policy the manifest cannot express</td>
+</tr>
+<tr>
+<td><code>manifest_fresh</code></td>
+<td>generator + committed JSON</td>
+<td>error</td>
+<td>the rebuilt generator output differs from the committed <code>interface_manifest.json</code> (see the binding-gate note below)</td>
+</tr>
+<tr>
+<td><code>owner_isolation</code></td>
+<td>manifest(s)</td>
+<td>error</td>
+<td>a non-base-owner manifest entry whose interface name shadows a base-owner (<code>autowarefoundation</code>) entry</td>
+</tr>
+<tr>
+<td><code>no_raw_spec_topic</code></td>
+<td>manifest(s)</td>
+<td>error</td>
+<td>a versioned <strong>topic</strong> whose interface name contains a heavy-raw deny substring; services are out of scope</td>
+</tr>
+</tbody>
+</table>
+<p>The manifest audits (<code>owner_isolation</code>, <code>no_raw_spec_topic</code>) take a <em>list</em> of manifest dicts so a future vendor-partition manifest can be cross-checked against the base manifest; with the single committed core manifest <code>owner_isolation</code> is vacuously clean.</p>
+<h3 id="binding-manifest-freshness-gate">Binding manifest-freshness gate<a class="headerlink" href="#binding-manifest-freshness-gate" title="Permanent link">#</a></h3>
+<p>The lint's <code>manifest_fresh</code> can only bind where the manifest generator binary is available; on a plain checkout / pre-commit run it skips gracefully. The <strong>binding</strong> freshness gate is the specs-package gtest (<code>autoware_component_interface_specs/test/test_manifest.cpp</code>), which regenerates the manifest with the built generator and asserts byte-equality against the committed <code>interface_manifest.json</code> on every build-and-test CI run. Manifest drift is therefore a hard failure regardless of the advisory lint.</p>
+<h2 id="honest-deferrals">Honest deferrals<a class="headerlink" href="#honest-deferrals" title="Permanent link">#</a></h2>
+<p>The following design gate-table entries are declared <code>off</code> in the committed config and are intentionally deferred; enabling one is rejected by the config loader because there is no implementation to run yet.</p>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Why deferred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no_foreign_if_dependency</code></td>
+<td>needs per-component provided/required role manifests, which do not exist yet (they arrive with the deploy-time OCI-label manifest track)</td>
+</tr>
+<tr>
+<td><code>profile_compat</code></td>
+<td>needs a vendor-specific interface profile that does not exist in this package yet; out of scope for this change</td>
+</tr>
+<tr>
+<td><code>if_usage_coverage</code></td>
+<td>runtime gate; needs runtime introspection data this static-analysis package does not have, deferred to future work</td>
+</tr>
+<tr>
+<td><code>admission_smoke</code></td>
+<td>runtime gate; needs runtime introspection data this static-analysis package does not have, deferred to future work</td>
+</tr>
+</tbody>
+</table>
+<p><code>owner_isolation</code> is wired and at <code>error</code> but binds only once a second (vendor-partition) manifest exists to cross-check against. Today the universe versioned surface is exactly the core re-exports (single version authority in core) and universe-owned specs are unversioned, so there is no separate universe-side gate wiring yet.</p>
+<h2 id="suppression-contract">Suppression contract<a class="headerlink" href="#suppression-contract" title="Permanent link">#</a></h2>
+<p>A spec struct is exempt from <code>spec_registered</code> when the marker <code>// interface-spec-lint: not-versioned</code> appears on the struct's own declaration line or on the line directly above it. Use it for a topic that is deliberately not part of the versioned interface set. The marker string is a fixed contract that other packages depend on, so do not change its text.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// interface-spec-lint: not-versioned</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">PointCloudMap</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">Message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sensor_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PointCloud2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/map/point_cloud_map"</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lint the core specs with the committed gate config (severities from the config).</span>
+ament_autoware_interface_spec_lint
 
-cspell:ignore Kenji, Koide
-&lt;--&gt;
+<span class="c1"># Advisory local run: print findings but always exit 0.</span>
+ament_autoware_interface_spec_lint<span class="w"> </span>--warn-only
 
-<p>The codes in this directory are derived from <a href="https://github.com/tier4/ndt_omp">https://github.com/tier4/ndt_omp</a>, which is a fork of <a href="https://github.com/koide3/ndt_omp">https://github.com/koide3/ndt_omp</a>.</p>
-<p>We use this code in accordance with the LICENSE, and we have directly confirmed this with Dr. Kenji Koide.</p>
-<p>We sincerely appreciate Dr. Koide’s support and contributions.</p></div>
+<span class="c1"># Explicit paths and an alternate gate config.</span>
+ament_autoware_interface_spec_lint<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>common/autoware_interface_spec_lint/config/interface_gates.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--spec-dir<span class="w"> </span>common/autoware_component_interface_specs/include/autoware/component_interface_specs<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--manifest<span class="w"> </span>common/autoware_component_interface_specs/interface_manifest.json
+</code></pre></div>
+<h3 id="manifest_fresh"><code>manifest_fresh</code><a class="headerlink" href="#manifest_fresh" title="Permanent link">#</a></h3>
+<p><code>manifest_fresh</code> needs the manifest generator binary. Point at it with <code>--generator &lt;path&gt;</code> or the <code>INTERFACE_MANIFEST_GENERATOR</code> environment variable. When neither is available the check skips gracefully (the binding gate is the specs-package gtest).</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">INTERFACE_MANIFEST_GENERATOR</span><span class="o">=</span><span class="nv">$PWD</span>/build/autoware_component_interface_specs/generate_interface_manifest
+ament_autoware_interface_spec_lint<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--manifest<span class="w"> </span>common/autoware_component_interface_specs/interface_manifest.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--generator<span class="w"> </span><span class="s2">"</span><span class="nv">$INTERFACE_MANIFEST_GENERATOR</span><span class="s2">"</span>
+</code></pre></div>
+<h2 id="gate-config">Gate config<a class="headerlink" href="#gate-config" title="Permanent link">#</a></h2>
+<p><code>config/interface_gates.yaml</code> maps each gate to a severity and carries the <code>no_raw_spec_topic</code> deny/allow lists and the <code>owner_isolation</code> base owner. The loader rejects an unknown gate name and rejects enabling a deferred gate (it may only be declared <code>off</code>).</p></div>
 
 
 
@@ -7858,7 +8103,7 @@ cspell:ignore Kenji, Koide
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: autoware_ndt_scan_matcher">
+          <a href="../autoware_global_parameter_loader/Readme/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Autoware Global Parameter Loader">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7868,20 +8113,20 @@ cspell:ignore Kenji, Koide
                 Previous
               </span>
               <div class="md-ellipsis">
-                autoware_ndt_scan_matcher
+                Autoware Global Parameter Loader
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../autoware_pose_initializer/" class="md-footer__link md-footer__link--next" aria-label="Next: autoware_pose_initializer">
+          <a href="../autoware_interpolation/" class="md-footer__link md-footer__link--next" aria-label="Next: Interpolation package">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                autoware_pose_initializer
+                Interpolation package
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -7922,12 +8167,12 @@ cspell:ignore Kenji, Koide
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../../../../../docs/assets/js/mathjax.js"></script>
+        <script src="../../docs/assets/js/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       
